@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16dp"
+        android:paddingBottom="120dp">
+
+        <!-- Header Card with Title -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/primary_blue"
+                android:padding="@dimen/padding_16dp">
+
+                <!-- Task Title -->
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SAFETY CHECKLIST"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_white"
+                    android:layout_marginBottom="@dimen/padding_8dp" />
+
+                <!-- Task Description -->
+                <TextView
+                    android:id="@+id/textViewTaskDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Complete all safety checks"
+                    android:textSize="@dimen/text_normal"
+                    android:textColor="@color/primary_light_blue" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Checklist Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_12dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_white"
+                android:padding="@dimen/padding_12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📋 Safety Checklist Items"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginBottom="@dimen/padding_8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Check each item as you complete the safety inspection. All items must be verified before starting work."
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_light" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Checklist Container -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_12dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:id="@+id/checklistContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_white"
+                android:padding="@dimen/padding_12dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Warning Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_12dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFF3E0"
+                android:padding="@dimen/padding_12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️ IMPORTANT"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/warning_orange"
+                    android:layout_marginBottom="@dimen/padding_8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Do not proceed with work until ALL safety items have been checked and verified. Safety is our priority!"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_light" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/padding_12dp">
+
+            <!-- Report Incident Button -->
+            <Button
+                android:id="@+id/buttonReportIncident"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="📝 Report Incident"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@color/danger_red"
+                android:layout_marginBottom="@dimen/padding_8dp" />
+
+            <!-- View Safety Score Button -->
+            <Button
+                android:id="@+id/buttonViewSafety"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="📊 View Safety Score"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@color/safe_green"
+                android:layout_marginBottom="@dimen/padding_8dp" />
+
+            <!-- Daily Safety Quiz Button -->
+            <Button
+                android:id="@+id/buttonStartQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="🎓 Daily Safety Quiz"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@color/primary_blue"
+                android:layout_marginBottom="@dimen/padding_8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

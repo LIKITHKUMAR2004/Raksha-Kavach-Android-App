@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Title: Incident Log -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Incident Log"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="24dp"
+        android:gravity="center" />
+
+    <!-- Label for incident details -->
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Incident Details:"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <!-- EditText for incident details -->
+    <EditText
+        android:id="@+id/editTextIncidentDetails"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Describe the incident..."
+        android:textColor="@color/black"
+        android:textColorHint="#999999"
+        android:padding="12dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:textSize="14sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Save Incident Button -->
+    <Button
+        android:id="@+id/buttonSaveIncident"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Save Incident"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

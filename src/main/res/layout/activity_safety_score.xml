@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Safety Score Report"
+            android:textSize="@dimen/text_heading"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/padding_20dp" />
+
+        <!-- Score Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:cardCornerRadius="@dimen/corner_radius_large"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/primary_blue"
+                android:padding="@dimen/padding_24dp"
+                android:gravity="center">
+
+                <!-- Score Percentage -->
+                <TextView
+                    android:id="@+id/textViewScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="85%"
+                    android:textSize="72sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_white"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/padding_12dp" />
+
+                <!-- Rating -->
+                <TextView
+                    android:id="@+id/textViewRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⭐⭐⭐⭐ GOOD"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_white"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Message Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_12dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_white"
+                android:padding="@dimen/padding_16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginBottom="@dimen/padding_8dp" />
+
+                <TextView
+                    android:id="@+id/textViewMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Good job! Most safety items are checked."
+                    android:textSize="@dimen/text_normal"
+                    android:textColor="@color/text_light"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Recommendations Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_12dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_white"
+                android:padding="@dimen/padding_16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📋 Recommendations"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginBottom="@dimen/padding_12dp" />
+
+                <TextView
+                    android:id="@+id/textViewRecommendations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="→ Review unchecked items carefully\n→ Verify all remaining safety measures\n→ Ensure proper equipment is available"
+                    android:textSize="@dimen/text_normal"
+                    android:textColor="@color/text_light"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F3E5F5"
+                android:padding="@dimen/padding_16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ℹ️ Score Information"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/electrical_color"
+                    android:layout_marginBottom="@dimen/padding_8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="90-100% = Excellent\n75-89% = Good\n50-74% = Fair\n0-49% = Poor"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_light"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/buttonBackToChecklist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="← Back to Checklist"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            android:textColor="@color/text_white"
+            android:background="@color/primary_blue"
+            android:layout_marginTop="@dimen/padding_12dp" />
+
+    </LinearLayout>
+</ScrollView>

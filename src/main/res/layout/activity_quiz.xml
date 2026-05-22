@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/primary_blue"
+            android:padding="@dimen/padding_16dp"
+            android:layout_marginBottom="@dimen/padding_16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎓 Daily Safety Quiz"
+                android:textSize="@dimen/text_heading"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/padding_8dp" />
+
+            <TextView
+                android:id="@+id/textViewQuestionNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 1 of 5"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/primary_light_blue"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Question Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_white"
+                android:padding="@dimen/padding_16dp">
+
+                <TextView
+                    android:id="@+id/textViewQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is the primary purpose of a welding helmet?"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Answers Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/bg_white"
+                android:padding="@dimen/padding_16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select your answer:"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginBottom="@dimen/padding_12dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Answer Option 1 -->
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To keep you cool"
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/text_dark"
+                        android:padding="@dimen/padding_12dp"
+                        android:layout_marginBottom="@dimen/padding_8dp" />
+
+                    <!-- Answer Option 2 -->
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To protect eyes and face from UV radiation and sparks"
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/text_dark"
+                        android:padding="@dimen/padding_12dp"
+                        android:layout_marginBottom="@dimen/padding_8dp" />
+
+                    <!-- Answer Option 3 -->
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To communicate with other workers"
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/text_dark"
+                        android:padding="@dimen/padding_12dp" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/card_elevation"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#E3F2FD"
+                android:padding="@dimen/padding_12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📚 Test your safety knowledge"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_blue"
+                    android:layout_marginBottom="@dimen/padding_8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer all questions carefully. Review any incorrect answers."
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_light" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Buttons Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Next Button -->
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="➜ Next Question"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@color/primary_blue"
+                android:layout_marginBottom="@dimen/padding_8dp"
+                android:visibility="visible" />
+
+            <!-- Submit Button (Hidden initially) -->
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="✓ Submit Quiz"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@color/safe_green"
+                android:layout_marginBottom="@dimen/padding_8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
